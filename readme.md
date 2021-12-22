@@ -10,6 +10,7 @@
 <img src="https://s9.gifyu.com/images/preview6ec7fc3f8852dd89.gif" alt="preview6ec7fc3f8852dd89.gif" width="500"/>
 
 This repository contains the source code for Receding Horizon Graph Search (RHGS), a MATLAB implementation of a graph-based receding horizon trajectory planner.
+It uses either a cooperative centralized or a priority-based non-cooperative (PBNC) planning method where the PBNC planner simulates distributed parallel computation. The priorities are determined by a heuristic algorithm based on graph coloring.
 
 The code is developed with MATLAB R2021a.
 To run a simulation:
@@ -18,11 +19,16 @@ startup()
 main()
 ```
 
-More information is provided in our publication [1], which we kindly ask you to consider citing if you find RHGS helpful for your work.
-The results of the publication can be reproduced by running
+More information is provided in our publications [1] and [2], which we kindly ask you to consider citing if you find RHGS or the used priority assignment algorithm helpful for your work.
+The results of [1] can be reproduced by running
 ```matlab
 startup()
 eval_paper()
+```
+The results of [2] can be reproduced by running
+```matlab
+startup()
+eval_prio_paper()
 ```
 This will take a while. The results are then found in the folder "results".
 ### Acknowledgements
@@ -34,6 +40,17 @@ This research is supported by the Deutsche Forschungsgemeinschaft (German Resear
 <summary>
 [1] P. Scheffe, M. V. A. Pedrosa, K. Flaßkamp and B. Alrifaee,
 "Receding Horizon Control Using Graph Search for Multi-Agent Trajectory Planning"
+</summary>
+<p>
+```
+bibtex
+```
+</p>
+</details>
+<details>
+<summary>
+[2] P. Scheffe, B. Alrifaee and J. Kahle,
+"Reducing Computation Time with Priority Assignment in Distributed Control"
 </summary>
 <p>
 ```
