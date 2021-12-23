@@ -10,7 +10,7 @@
 <img src="https://s9.gifyu.com/images/preview6ec7fc3f8852dd89.gif" alt="preview6ec7fc3f8852dd89.gif" width="500"/>
 
 This repository contains the source code for Receding Horizon Graph Search (RHGS), a MATLAB implementation of a graph-based receding horizon trajectory planner.
-It uses either a cooperative centralized or a priority-based non-cooperative (PBNC) planning method where the PBNC planner simulates distributed parallel computation. The priorities are determined by a heuristic algorithm based on graph coloring.
+It uses either a cooperative centralized or a priority-based non-cooperative (PBNC) distributed planning method where the PBNC planner simulates parallel computation. The priorities are determined by a heuristic algorithm based on graph coloring.
 
 The code is developed with MATLAB R2021a.
 To run a simulation:
