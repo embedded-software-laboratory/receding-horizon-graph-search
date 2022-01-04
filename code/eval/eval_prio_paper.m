@@ -1,6 +1,10 @@
+%% intro
+fprintf("\nEvaluation script for \'Reducing Computation Time with Priority Assignment in Distributed Control\'\n\n")
+
 %% priority assignments <-> topological levels
 % Scenario at intersection with dedicated left turning lane:
 % sn(1)-ln(2)-re(3)-le(4)-ss(5)-ls(6)-rw(7)-lw(8)
+fprintf("\nEvaluate number of different priority assignments resulting in a certain number of levels in an 8-vehicle scenario at intersection\n")
 
 c = zeros(8,8);
 c(2,4) = 1; c(4,2) = 1;
@@ -30,6 +34,7 @@ close(fig);
 %% computation time <-> topological levels
 % Scenario at intersection with dedicated left turning lane:
 % sn(1)-ln(2)-re(3)-le(4)-ss(5)-ls(6)-rw(7)-lw(8)
+fprintf("\nEvaluate computation time for planning using priority assignments with different numbers of levels\n")
 level = 8:-5:3;
 tcomp_t = 100*level/8;
 
@@ -48,6 +53,7 @@ close(fig);
 
 %% computation time algorithm
 % theoretical
+fprintf("\nEvaluate computation time for priority assignment algorithm in random scenarios of varying size\n")
 n_runs = 10;
 n_agents = [5,10,50,100,500,1000];
 range = 1:length(n_agents);
@@ -81,6 +87,7 @@ close(fig);
 
 % Scenario at intersection with dedicated left turning lane:
 % sn(1)-ln(2)-re(3)-le(4)-ss(5)-ls(6)-rw(7)-lw(8)
+fprintf("\nEvaluate computation time for priority assignment algorithm in 8-vehicle scenario at intersection\n")
 n = 100;
 for i = 1:n
     tstart = tic;
