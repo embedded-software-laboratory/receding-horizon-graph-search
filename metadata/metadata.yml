@@ -1,15 +1,9 @@
 metadata_version: 1
-name: Receding Horizon Control Using Graph Search for Multi-Agent Trajectory Planning
+name: Reducing Computation Time with Priority Assignment in Distributed Control
 description: |-
-  This is the code capsule for the papers with the titles:
-  (A) Receding Horizon Control Using Graph Search for Multi-Agent Trajectory Planning
-  (B) Reducing Computation Time with Priority Assignment in Distributed Control
-  Abstract A:
-  It is hard to find the global optimum to general nonlinear, nonconvex optimization problems in reasonable time.
-  This paper presents a method to transfer the receding horizon control approach, where nonlinear, nonconvex optimization problems are considered, into graph-search problems. Specifically, systems with symmetries are considered to transfer system dynamics into a finite state automaton. In contrast to traditional graph-search approaches where the search continues until the goal vertex is found, the transfer of a receding horizon control approach to graph-search problems presented in this paper allows to solve them in real-time. We proof that the solutions are recursively feasible by restricting the graph search to end in accepting states of the underlying finite state automaton.
-  The approach is applied to trajectory planning for multiple networked and autonomous vehicles.
-  We evaluate its effectiveness in simulation as well as in experiments in the Cyber-Physical Mobility Lab, an open source platform for networked and autonomous vehicles. We show real-time capable trajectory planning with collision avoidance in experiments on off-the-shelf hardware and code in MATLAB for two vehicles.
-  Abstract B:
+  This is the code capsule for the paper with the title:
+  Reducing Computation Time with Priority Assignment in Distributed Control
+  Abstract:
   This article presents an approach for priority assignment in priority-based distributed control with the goal of minimizing computation time for the networked system. The coupling graph of the system becomes a \ac{dag} through priority assignment. From this \ac{dag}, a topological order can be derived. The number of levels in this topological order has a large influence on the computation time of the networked system. We present an approach which uses graph coloring to determine priorities which minimize the number of levels in the topological order.
   The approach is applied to trajectory planning for networked vehicles.
   The effectiveness of the algorithm is shown in theoretical and numerical examples.
@@ -24,12 +18,6 @@ authors:
 - name: Patrick Scheffe
   affiliations:
   - name: RWTH Aachen University
-- name: Matheus Vitor de Andrade Pedrosa
-  affiliations:
-  - name: Saarland University
-- name: Kathrin Flaßkamp
-  affiliations:
-  - name: Saarland University
 - name: Bassam Alrifaee
   affiliations:
   - name: RWTH Aachen University
