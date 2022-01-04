@@ -4,4 +4,4 @@
 set -ex
 
 # This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
-/Applications/MATLAB_R2021a.app/bin/matlab -nodisplay -r "addpath(genpath('.')); startup; eval_prio_paper; quit"
+matlab -nodisplay -r "addpath(genpath('.')); startup; eval_prio_paper; quit"
