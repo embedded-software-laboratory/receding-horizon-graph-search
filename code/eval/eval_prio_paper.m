@@ -28,7 +28,7 @@ set(gca,'XTick',1:size(c,1));
 ylabel('Priority Assignments','Interpreter','LaTex');
 xlabel('Topological Levels','Interpreter','LaTex');
 set_figure_properties(fig, 'paper');
-filepath = fullfile('results', 'levels.pdf');
+filepath = fullfile('../results', 'levels.pdf');
 exportgraphics(fig, filepath, 'ContentType','vector');
 close(fig);
 
@@ -48,7 +48,7 @@ xlabel('Computation Time [\%]','Interpreter','LaTex');
 ylabel('Priority Assignment','Interpreter','LaTex');
 set(gca, 'TickLabelInterpreter', 'latex');
 set_figure_properties(fig, 'paper');
-filepath = fullfile('results', 'tcomp.pdf');
+filepath = fullfile('../results', 'tcomp.pdf');
 exportgraphics(fig, filepath, 'ContentType','vector');
 close(fig);
 
@@ -82,7 +82,7 @@ set(gca,'YTick',10.^(-5:2:1));
 set(gca, 'XTickLabel', n_agents, 'TickLabelInterpreter', 'latex');
 xlim([min(range)-0.25 max(range)+0.25])
 set_figure_properties(fig, 'paper');
-filepath = fullfile('results', 'coloring_time.pdf');
+filepath = fullfile('../results', 'coloring_time.pdf');
 exportgraphics(fig, filepath, 'ContentType','vector');
 close(fig);
 
