@@ -25,8 +25,8 @@ fig = figure('position',[100 100 600 630],'color',[1 1 1]);
 histogram(lvl_dist, 'FaceAlpha',1);
 set(gca,'yscale','log');
 set(gca,'XTick',1:size(c,1));
-ylabel('Priority Assignments','Interpreter','LaTex');
-xlabel('Topological Levels','Interpreter','LaTex');
+ylabel('\# Prio. Assignments','Interpreter','LaTex');
+xlabel('Computation Levels','Interpreter','LaTex');
 set_figure_properties(fig, 'paper');
 filepath = fullfile('../results', 'levels.pdf');
 exportgraphics(fig, filepath, 'ContentType','vector');
@@ -56,7 +56,7 @@ close(fig);
 % theoretical
 fprintf("\nEvaluate computation time for priority assignment algorithm in random scenarios of varying size\n")
 n_runs = 10;
-n_agents = [5,10,50,100,500,1000];
+n_agents = [5,10:10:50,100:50:500,600:100:1000];
 range = 1:length(n_agents);
 tcomp = zeros(1,length(n_agents));
 tcomp_helper = zeros(1,n_runs);
@@ -68,19 +68,17 @@ for n = range
         [isDAG, topo_groups] = topological_sorting_coloring(adjacency);
         tcomp_helper(i) = toc(tstart);
     end
-    tcomp(n) = mean(tcomp_helper);
+    tcomp(n) = median(tcomp_helper);
 end
 
 % plot & save figure
 fig = figure('position',[100 100 600 630],'color',[1 1 1]);
-plot(range, tcomp, '-d', 'Color', '#0072BD');
+plot(n_agents, tcomp, '-o', 'Color', '#0072BD');
+scatter(n_agents, tcomp, 10,'filled')
 set(gca,'yscale','log');
-xlabel('Number of Agents','Interpreter','LaTex')
+xlabel('\# Agents','Interpreter','LaTex')
 ylabel('Computation Time [s]','Interpreter','LaTex')
-set(gca,'XTick',range)
 set(gca,'YTick',10.^(-5:2:1));
-set(gca, 'XTickLabel', n_agents, 'TickLabelInterpreter', 'latex');
-xlim([min(range)-0.25 max(range)+0.25])
 set_figure_properties(fig, 'paper');
 filepath = fullfile('../results', 'coloring_time.pdf');
 exportgraphics(fig, filepath, 'ContentType','vector');
