@@ -43,6 +43,7 @@ tcomp_t = 100*level/8;
 fig = figure('position',[100 100 600 630],'color',[1 1 1]);
 barh(level,tcomp_t);
 yticklabels({'$p_c$','$p_b$'})
+set(gca,'XTick',0:20:100);
 xline(min(tcomp_t),'-r');
 xlabel('Computation Time [\%]','Interpreter','LaTex');
 ylabel('Priority Assignment','Interpreter','LaTex');
